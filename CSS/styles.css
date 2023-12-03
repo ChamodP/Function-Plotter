@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    gap: 100px;
+    grid-template-columns: 1fr 3fr;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+#color{
+    height: 40px;
+    width: 70px;
+}

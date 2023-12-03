@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Plotter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="JS/scripts.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Function plotter</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="left">
+          <form>
+            <div class="form-group">
+              <label for="xMin">xMin: value:</label>
+              <input type="number" class="form-control" id="xMin" />
+            </div>
+
+            <div class="form-group">
+              <label for="xMax">xMax: value:</label>
+              <input type="number" class="form-control" id="xMax" />
+            </div>
+
+            <div class="form-group">
+              <label for="yMin">yMin: value:</label>
+              <input type="number" class="form-control" id="yMin" />
+            </div>
+
+            <div class="form-group">
+              <label for="yMax">yMax: value:</label>
+              <input type="number" class="form-control" id="yMax" />
+            </div>
+
+            <div class="form-group">
+              <label for="color">Color: value:</label>
+              <input type="color" class="form-control" id="color" />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onsubmit="handleSubmit()"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="right">
+          <div class="functionPlot"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
