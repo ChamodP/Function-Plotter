@@ -17,12 +17,14 @@
   </head>
   <body>
     <header>
-      <h1>Function plotter</h1>
+        <nav>
+            <h1>Function plotter</h1>
+        </nav>
     </header>
     <main>
       <div class="container">
         <div class="left">
-          <form>
+          <form onsubmit="handleSubmit(event)">
             <div class="form-group">
               <label for="xMin">xMin: value:</label>
               <input type="number" class="form-control" id="xMin" />
@@ -48,17 +50,16 @@
               <input type="color" class="form-control" id="color" />
             </div>
 
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onsubmit="handleSubmit()"
-            >
-              Submit
-            </button>
+            <div class="form-group">
+              <label for="function">Function to plot:</label>
+              <input type="text" class="form-control" id="function" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Plot it!</button>
           </form>
         </div>
         <div class="right">
-          <div class="functionPlot"></div>
+          <div id="functionPlot"></div>
         </div>
       </div>
     </main>
